@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #sidenav {
+        position: fixed;
+        background-color: purple;
+        right: -200px;
+        top: 0;
+        height: 100%;
+        width: 200px;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="sidenav">
+      <button onclick="hideSidenav()">X</button>
+    </section>
+    <button onclick="showSidenav()">show sidenav</button>
+    <script>
+      let showSidenav = function () {
+        document.getElementById("sidenav").style.right = "0px";
+      };
+      let hideSidenav = function () {
+        document.getElementById("sidenav").style.right = "-200px";
+      };
+    </script>
+  </body>
+</html>

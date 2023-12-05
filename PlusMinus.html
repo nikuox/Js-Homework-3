@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #counter {
+        background-color: orange;
+        color: white;
+        display: inline-block;
+        padding: 5px 8px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="plusHnadler()">plus</button>
+    <button onclick="minusHnadler()">minus</button>
+    <button onclick="resetHandler()">reset</button>
+    <div>you click button <span id="counter">0</span> times</div>
+    <script>
+      let count = 0;
+      let updateCounter = function () {
+        let countElement = document.getElementById("counter");
+        if (count < 0) {
+          countElement.style.backgroundColor = "red";
+        } else if (count >= 0 && count < 10) {
+          countElement.style.backgroundColor = "orange";
+        } else {
+          countElement.style.backgroundColor = "green";
+        }
+        countElement.innerText = count;
+      };
+      let plusHnadler = function () {
+        count++;
+        updateCounter();
+      };
+
+      function minusHnadler() {
+        count--;
+        updateCounter();
+      }
+
+      let resetHandler = () => {
+        count = 0;
+        updateCounter();
+      };
+    </script>
+  </body>
+</html>
