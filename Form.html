@@ -9,7 +9,7 @@
         height: 500px;
         width: 560px;
         background-color: lightblue;
-        border: 1px solid darkblue;
+       
         border-radius: 5px;
         margin: auto;
         padding: 10px;
@@ -34,10 +34,34 @@ border-radius: 5px;
 border: 1px solid lightblue;
         outline: 1px solid lightblue;
       }
+      .btn_submit{
+       outline: none;
+        background-color: gray;
+        color: white;
+        border-radius: 5px;
+        width: 70px;
+        height: 30px;
+      }
+
+      .circle{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        padding-bottom: 50px;
+      }
+
+      .object{
+        border-radius: 50%;
+        border:1px solid green;
+        width: 50px;
+        height: 50px;
+      }
 
     </style>
   </head>
   <body>
+    <div class="circle"><div class="object"></div><div class="object"></div><div class="object"></div></div>
     <form action="" class="form">
         <h1> Form Example</h1>
       <label for="fname">First name:</label>
@@ -59,7 +83,7 @@ border: 1px solid lightblue;
       <input type="radio" id="other" name="gender" value="other" />
         <label for="javascript">Other</label> </br> </br>
 
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" class="btn_submit" />
     </form>
   </body>
 </html>
