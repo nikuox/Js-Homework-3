@@ -94,28 +94,28 @@ border: 1px solid lightblue;
       <input type="radio" id="other" name="gender" value="other" />
         <label for="javascript">Other</label> </br> </br>
 
-      <input type="submit" class="btn_submit" onclick="form()"/>
+      <button type="submit" class="btn_submit" onclick="btn1()">Submit</button>
     </div>
 
     <div class="form2">
-      <input type="submit" value="Submit" class="btn_submit" onclick="form2()"/>
+      <button type="submit"  class="btn_submit" onclick="btn2()">Submit</button>
     </div>
 
 
 
 
     <script>
-      function form(){
+      function btn1(){
         document.getElementById("form").style.display="none";
         document.getElementById("form2").style.display="block";
         document.getElementById("object1").style.backgroundColor="green";
       }
 
-      function form2(){
-        document.getElementById("form").style.display="none";
-        document.getElementById("form2").style.display="block";
-        document.getElementById("object").style.backgroundColor="green";
-      }
+      // function form2(){
+      //   document.getElementById("form").style.display="none";
+      //   document.getElementById("form2").style.display="block";
+      //   document.getElementById("object").style.backgroundColor="green";
+      // }
     </script>
   </body>
 </html>
