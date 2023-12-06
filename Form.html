@@ -46,23 +46,34 @@ border: 1px solid lightblue;
       .circle{
         width: 50%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin: auto;
         padding-bottom: 50px;
       }
 
-      .object{
+      .object1, .object2{
         border-radius: 50%;
         border:1px solid green;
         width: 50px;
         height: 50px;
       }
 
+
+      .form2{
+        height: 500px;
+        width: 560px;
+        background-color: lightblue;
+        border-radius: 5px;
+        margin: auto;
+        padding: 10px;
+        display: none;
+      }
+
     </style>
   </head>
   <body>
-    <div class="circle"><div class="object"></div><div class="object"></div><div class="object"></div></div>
-    <form action="" class="form">
+    <div class="circle"><div class="object1"></div><div class="object2"></div></div>
+    <div  class="form">
         <h1> Form Example</h1>
       <label for="fname">First name:</label>
       <input type="text" id="fname" name="fname" value="" class="input__top" />
@@ -83,7 +94,28 @@ border: 1px solid lightblue;
       <input type="radio" id="other" name="gender" value="other" />
         <label for="javascript">Other</label> </br> </br>
 
-      <input type="submit" value="Submit" class="btn_submit" />
-    </form>
+      <input type="submit" class="btn_submit" onclick="form()"/>
+    </div>
+
+    <div class="form2">
+      <input type="submit" value="Submit" class="btn_submit" onclick="form2()"/>
+    </div>
+
+
+
+
+    <script>
+      function form(){
+        document.getElementById("form").style.display="none";
+        document.getElementById("form2").style.display="block";
+        document.getElementById("object1").style.backgroundColor="green";
+      }
+
+      function form2(){
+        document.getElementById("form").style.display="none";
+        document.getElementById("form2").style.display="block";
+        document.getElementById("object").style.backgroundColor="green";
+      }
+    </script>
   </body>
 </html>
