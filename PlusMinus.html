@@ -16,8 +16,8 @@
     </style>
   </head>
   <body>
-    <button onclick="plusHnadler()">plus</button>
-    <button onclick="minusHnadler()">minus</button>
+    <button onclick="plusHandler()">plus</button>
+    <button onclick="minusHandler()">minus</button>
     <button onclick="resetHandler()">reset</button>
     <div>click button <span id="counter">0</span> times</div>
     <script>
@@ -33,12 +33,12 @@
         }
         countElement.innerText = count;
       };
-      let plusHnadler = function () {
+      let plusHandler = function () {
         count++;
         updateCounter();
       };
 
-      function minusHnadler() {
+      function minusHandler() {
         count--;
         updateCounter();
       }
