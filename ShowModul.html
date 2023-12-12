@@ -10,7 +10,15 @@
         padding: 0;
         box-sizing: border-box;
       }
-
+      #btn {
+        border: 1px solid blue;
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: aquamarine;
+        margin: 10px;
+        color: blue;
+      }
       #modal {
         border: 1px solid lightblue;
         background-color: purple;
@@ -21,14 +29,25 @@
         left: 30%;
         top: 100px;
         display: none;
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      #close {
+        border: 1px solid blue;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: aquamarine;
+        color: blue;
       }
     </style>
   </head>
   <body>
-    <button onclick="showModal()">login</button>
+    <button id="btn" onclick="showModal()">Click Me!</button>
     <div id="modal">
       Lorem ipsum dolor sit amet.
-      <button onclick="hideModal()">x</button>
+      <button id="close" onclick="hideModal()">x</button>
     </div>
     <script>
       let showModal = function () {
