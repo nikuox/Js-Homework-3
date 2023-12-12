@@ -13,19 +13,50 @@
 
       #sidenav {
         position: fixed;
-        background-color: purple;
-        right: -200px;
+        background-color: wheat;
+        right: -250px;
         top: 0;
         height: 100%;
-        width: 200px;
+        width: 250px;
         transition: 1s;
         border-radius: 5px;
+      }
+
+      #sidenav .side-nav li {
+        padding: 15px 20px;
+        list-style-type: none;
+        color: rgba(0, 0, 0, 0.54);
+        cursor: pointer;
+      }
+
+      #sidenav .side-nav li:hover {
+        background-color: lightgrey;
+      }
+
+      #sidenav .side-nav li i {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.54);
+        margin-right: 20px;
+        margin-left: 10px;
+      }
+
+      #close {
+        outline: none;
+        border: none;
+        color: gray;
       }
     </style>
   </head>
   <body>
     <section id="sidenav">
-      <button onclick="hideSidenav()">X</button>
+      <button id="close" onclick="hideSidenav()">X</button>
+      <ul class="side-nav">
+        <li class="side-nav-item"><i class="ion-ios-home"></i>Home</li>
+        <li class="side-nav-item"><i class="ion-android-person"></i>About</li>
+        <li class="side-nav-item"><i class="ion-document-text"></i>Resume</li>
+        <li class="side-nav-item"><i class="ion-gear-a"></i>Services</li>
+        <li class="side-nav-item"><i class="ion-ios-telephone"></i>Contact</li>
+      </ul>
     </section>
     <button onclick="showSidenav()">show sidenav</button>
     <script>
@@ -33,7 +64,7 @@
         document.getElementById("sidenav").style.right = "0px";
       };
       let hideSidenav = function () {
-        document.getElementById("sidenav").style.right = "-200px";
+        document.getElementById("sidenav").style.right = "-250px";
       };
     </script>
   </body>

@@ -9,7 +9,6 @@
         height: 500px;
         width: 560px;
         background-color: lightblue;
-       display: block;
         border-radius: 5px;
         margin: auto;
         padding: 10px;
@@ -18,7 +17,7 @@
         padding-top: 0px;
       }
 
-      .form .input__top {
+       .input__top {
         border-radius: 5px;
         border: 1px solid lightblue;
         outline: 1px solid lightblue;
@@ -51,7 +50,7 @@ border: 1px solid lightblue;
         padding-bottom: 50px;
       }
 
-      .object1, .object2{
+      .object1, .object2, .object3{
         border-radius: 50%;
         border:1px solid green;
         width: 50px;
@@ -69,11 +68,21 @@ border: 1px solid lightblue;
         display: none;
       }
 
+      .form3{
+        height: 500px;
+        width: 560px;
+        background-color: lightblue;
+        border-radius: 5px;
+        margin: auto;
+        padding: 10px;
+        display: none;
+      }
+
     </style>
   </head>
   <body>
-    <div class="circle"><div class="object1"></div><div class="object2"></div></div>
-    <div  class="form">
+    <div class="circle"><button class="object1"id="btnStep1"></button><button class="object2"id="btnStep2"></button><button class="object3"id="btnStep3"></button></div>
+    <div  class="form" id="detailStep1">
         <h1> Form Example</h1>
       <label for="fname">First name:</label>
       <input type="text" id="fname" name="fname" value="" class="input__top" />
@@ -94,28 +103,57 @@ border: 1px solid lightblue;
       <input type="radio" id="other" name="gender" value="other" />
         <label for="javascript">Other</label> </br> </br>
 
-      <button type="submit" class="btn_submit" onclick="btn1()">Submit</button>
+      <button onclick="goStep(2)" class="btn_submit">Next</button>
     </div>
 
-    <div class="form2">
-      <button type="submit"  class="btn_submit" onclick="btn2()">Submit</button>
+    <div class="form2" id="detailStep2">
+      <label for="address">Leave a Comment: </label>
+      <input type="text" id="number" name="number" value="" class="input__address"/><br><br>
+      <button onclick="goStep(1)" class="btn_submit">Prev</button>
+      <button onclick="goStep(3)" class="btn_submit">Next</button>
     </div>
 
+    <div class="form3" id="detailStep3">The End</div>
 
 
 
     <script>
-      function btn1(){
-        document.getElementById("form").style.display="none";
-        document.getElementById("form2").style.display="block";
-        document.getElementById("object1").style.backgroundColor="green";
-      }
+     goStep(1)
 
-      // function form2(){
-      //   document.getElementById("form").style.display="none";
-      //   document.getElementById("form2").style.display="block";
-      //   document.getElementById("object").style.backgroundColor="green";
-      // }
+
+function goStep(num) {
+    if (num == 1) {
+        document.getElementById('detailStep1').style.display = 'block';
+        document.getElementById('detailStep2').style.display = 'none';
+        document.getElementById('detailStep3').style.display = 'none';
+        document.getElementById('btnStep1').style.backgroundColor = 'darkblue';
+        document.getElementById('btnStep1').style.color = 'white';
+        document.getElementById('btnStep2').style.backgroundColor = 'gray';
+        document.getElementById('btnStep2').style.color = 'white';
+        document.getElementById('btnStep3').style.backgroundColor = 'gray';
+        document.getElementById('btnStep3').style.color = 'white';
+    } else if (num == 2) {
+        document.getElementById('detailStep1').style.display = 'none';
+        document.getElementById('detailStep2').style.display = 'block';
+        document.getElementById('detailStep3').style.display = 'none';
+        document.getElementById('btnStep1').style.backgroundColor = 'green';
+        document.getElementById('btnStep1').style.color = 'white';
+        document.getElementById('btnStep2').style.backgroundColor = 'darkblue';
+        document.getElementById('btnStep2').style.color = 'white';
+        document.getElementById('btnStep3').style.backgroundColor = 'gray';
+        document.getElementById('btnStep3').style.color = 'white';
+    } else if (num == 3) {
+        document.getElementById('detailStep1').style.display = 'none';
+        document.getElementById('detailStep2').style.display = 'none';
+        document.getElementById('detailStep3').style.display = 'block';
+        document.getElementById('btnStep1').style.backgroundColor = 'green';
+        document.getElementById('btnStep1').style.color = 'white';
+        document.getElementById('btnStep2').style.backgroundColor = 'green';
+        document.getElementById('btnStep2').style.color = 'white';
+        document.getElementById('btnStep3').style.backgroundColor = 'darkblue';
+        document.getElementById('btnStep3').style.color = 'white';
+    }
+}
     </script>
   </body>
 </html>
